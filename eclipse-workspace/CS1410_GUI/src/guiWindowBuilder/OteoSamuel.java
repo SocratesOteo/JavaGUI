@@ -5,6 +5,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import java.awt.Color;
 
 public class OteoSamuel extends JFrame {
 
@@ -36,6 +40,13 @@ public class OteoSamuel extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		
+		JLabel lblhelloWorld = new JLabel("Hello World");
+		lblhelloWorld.setVerticalAlignment(SwingConstants.BOTTOM);
+		lblhelloWorld.setForeground(new Color(0, 0, 139));
+		lblhelloWorld.setHorizontalAlignment(SwingConstants.CENTER);
+		lblhelloWorld.setFont(new Font("Andale Mono", Font.PLAIN, 29));
+		contentPane.add(lblhelloWorld);
 
 	}
 
