@@ -11,6 +11,7 @@ import java.awt.Font;
 import java.awt.Color;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 import java.awt.Component;
+import java.awt.Dimension;
 
 public class demoJFrame extends JFrame {
 
@@ -21,6 +22,7 @@ public class demoJFrame extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -49,6 +51,8 @@ public class demoJFrame extends JFrame {
 
 	private void newlblHelloWorld() {
 		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setBackground(new Color(255, 255, 0));
+		lblNewLabel.setOpaque(true);
 		lblNewLabel.setForeground(new Color(0, 0, 128));
 		lblNewLabel.setFont(new Font("Space Mono", Font.PLAIN, 24));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
