@@ -11,11 +11,19 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
+
+/**
+ * Demo how to create a event handler for a button.
+ * 
+ * @author socrates
+ */
 public class MyFirstButton extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JLabel lblToggle;
 
 	/**
 	 * Launch the application.
@@ -45,7 +53,7 @@ public class MyFirstButton extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		newButtonMyFirstButton();
-
+		createLblToggle();
 	}
 
 	private void newButtonMyFirstButton() {
@@ -53,10 +61,10 @@ public class MyFirstButton extends JFrame {
 		btnNewButton.setBorderPainted(false);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (btnNewButton.getBackground().equals(Color.GREEN))
-					btnNewButton.setBackground(Color.YELLOW);
+				if (lblToggle.getBackground().equals(Color.GREEN))
+					lblToggle.setBackground(Color.ORANGE);
 				else
-					btnNewButton.setBackground(Color.GREEN);
+				lblToggle.setBackground(Color.GREEN);
 			}
 		});
 		btnNewButton.setOpaque(true);
@@ -64,6 +72,16 @@ public class MyFirstButton extends JFrame {
 		btnNewButton.setFont(new Font("Lucida Grande", Font.PLAIN, 30));
 		btnNewButton.setBackground(Color.RED);
 		contentPane.add(btnNewButton, BorderLayout.CENTER);
+		
+		
+	}
+
+	private void createLblToggle() {
+		lblToggle = new JLabel("Toggle");
+		lblToggle.setOpaque(true);
+		lblToggle.setBackground(Color.ORANGE);
+		lblToggle.setBorder(new EmptyBorder(0, 15, 0, 15));
+		contentPane.add(lblToggle, BorderLayout.WEST);
 	}
 
 }
