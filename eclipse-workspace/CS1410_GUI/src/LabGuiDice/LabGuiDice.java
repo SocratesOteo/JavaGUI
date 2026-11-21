@@ -61,7 +61,14 @@ public class LabGuiDice extends JFrame {
 	
 	
 	
-	
+	/**
+	 * Class that contains the "Roll 'Em" button
+	 * with multiple parts the actionListener method, that 
+	 * and an ArrayList called diceImages that holds objects of type ImageItem
+	 * 
+	 * 
+	 * @return a ImageIcon variable of type String
+	 */
 	private void rollEmButton() {
 		//ArrayList containing the images of each face of the dice.
 		ImageIcon dieOne = new ImageIcon(LabGuiDice.class.getResource("/Images/die-1.png"));
@@ -98,12 +105,11 @@ public class LabGuiDice extends JFrame {
 			        randomIndex = r.nextInt(diceImages.size());
 			    }
 
-			    // Update previousIndex and the label AFTER the while loop finishes
 			    previousIndex = randomIndex;
 			    ImageItem current = diceImages.get(randomIndex);
 			    lblDiceImg.setIcon(current.getIcon());
-			    System.out.print(current.getImgName());
-			    System.out.println();
+			    //System.out.print(current.getImgName());
+			    
 				
 				
 				// end of action listener
@@ -121,7 +127,11 @@ public class LabGuiDice extends JFrame {
 		
 		
 	}
-
+	
+	/**
+	 * Method of the Label object
+	 * 
+	 */
 	private void lblDice() {
 		
 		lblDiceImg.setOpaque(true);
@@ -131,6 +141,18 @@ public class LabGuiDice extends JFrame {
 		contentPane.add(lblDiceImg, BorderLayout.CENTER);
 	}
 	
+	
+	/**
+	 * Class ImageItem that creates a new Type
+	 * creates an object that contains
+	 * three variables for the name of the icon for presentation,
+	 * the icon filename address, 
+	 * and index number to track the number as an integer.
+	 * 
+	 * @param imgName of type String
+	 * @param icon of type ImageIcon
+	 * @param index of type integer.
+	 */
 	public static class ImageItem {
 		private String imgName;
 		private ImageIcon icon;
