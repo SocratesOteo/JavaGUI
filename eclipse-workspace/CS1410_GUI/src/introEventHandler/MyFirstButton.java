@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 /**
  * Demo how to create a event handler for a button.
  * 
- * @author socrates
+ * @author Socrates
  */
 public class MyFirstButton extends JFrame {
 
